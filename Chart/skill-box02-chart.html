@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="当サイトはWEBデザイナーを目指す河野和正のポートフォリオサイトです。">
+    <meta name="sns-description" content="大分県でのWEBのお仕事のご依頼を募集しております。">
+    <meta name="keywords" content="WEBデザイナー,ホームページ制作,ホームページ作成,ポートフォリオサイト,河野和正,">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Portfolio by KAZUMASA</title>
+    <style>
+    #canvas-holder {
+        width: 600px;
+        margin-left: -9em;
+    }
+    @media screen and (max-width: 320px){
+        #canvas-holder{
+            width: 400px;
+            margin-left: -6em;
+        }
+    }
+    </style>
+    <script type="text/javascript" src="js/Chart.js"></script>
+</head>
+
+<body>
+    <div id="canvas-holder">
+        <canvas id="chart-area">
+    </div>
+    <script>
+    var doughnutData = [{
+        value: 180,
+        color: "#A42322",
+        highlight: "#E9B647",
+        label: "HTML"
+    }, {
+        value: 200,
+        color: "#92A549",
+        highlight: "#2D6BA7",
+        label: "CSS"
+    }, {
+        value: 170,
+        color: "#FFFFFF",
+        highlight: "#CA40D3",
+        label: "SASS"
+    }, {
+        value: 120,
+        color: "#E34A4B",
+        highlight: "#616774",
+        label: "jQuery"
+    }, {
+        value: 60,
+        color: "#00ff33",
+        highlight: "#7BAB72",
+        label: "Javascript"
+    }, {
+        value: 40,
+        color: "#0BED36",
+        highlight: "#30FF00",
+        label: "JSON"
+    }, {
+        value: 40,
+        color: "#0099ff",
+        highlight: "#8A9D2E",
+        label: "PHP"
+    }, {
+        value: 100,
+        color: "#20476B",
+        highlight: "#616774",
+        label: "Wordpress"
+    }, {
+        value: 90,
+        color: "#ccffff",
+        highlight: "#616774",
+        label: "SEO"
+    }];
+
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+            responsive: true
+        });
+    };
+    </script>
+</body>
+
+</html>

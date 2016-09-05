@@ -1,0 +1,158 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General Demo Style */
+@font-face {
+  font-family: 'fontawesome';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/fontawesome.eot");
+  src: url("../fonts/fontawesome.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome.svg#fontawesome") format("svg"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype");
+}
+/* Reset */
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before {
+  display: table;
+  content: ' ';
+}
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: ' ';
+}
+
+.container > header {
+  padding: 2.875em 1.875em 1.875em;
+}
+.container > header h1 {
+  font-size: 2.125em;
+  font-weight: 400;
+  line-height: 1.3;
+  float: left;
+  margin: 0;
+}
+.container > header span {
+  font-weight: 700;
+  display: block;
+  padding: 0 0 .6em .1em;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+}
+.container > header nav {
+  float: right;
+}
+.container > header nav a {
+  position: relative;
+  display: block;
+  float: left;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 .1em;
+  text-indent: -8000px;
+  color: transparent;
+  border: 4px solid #47a3da;
+  border-radius: 50%;
+  background: #fff;
+}
+.container > header nav a:after {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 600%;
+  content: attr(data-info);
+  text-align: right;
+  pointer-events: none;
+  opacity: 0;
+  color: #47a3da;
+}
+.container > header nav a:hover {
+  background: #47a3da;
+}
+.container > header nav a:hover:after {
+  opacity: 1;
+}
+
+.main > section button {
+  position: fixed;
+  z-index: 102;
+  right: 2%;
+  top: 3%;
+  display: none;
+  width: 60px;
+  height: 70px;
+  margin: 2px;
+  padding: 0;
+  padding-top: 18px;
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 10px;
+  /* Safari and Chrome */
+  -moz-border-radius: 10px;
+  /* Firefox */
+  border-radius: 10px;
+  background: #47a3da;
+  background-image: url(../img/main-img/sp-menu-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 54px;
+  behavior: url(border-radius.htc);
+  /* IE */
+}
+@media screen and (max-width: 640px) {
+  .main > section button {
+    display: block;
+  }
+}
+.main > section button:hover {
+  background: #258ecd;
+  background-image: url(../img/main-img/sp-menu-icon.png);
+  background-position: center;
+  background-size: 54px;
+}
+.main > section button:active {
+  background: #0d77b6;
+  background-image: url(../img/main-img/sp-menu-icon.png);
+  background-position: center;
+  background-size: 54px;
+}
+.main > section button:disabled {
+  pointer-events: none;
+  background: #aaa;
+  background-image: url(../img/main-img/sp-menu-icon.png);
+  background-position: center;
+  background-size: 54px;
+}
+
+.icon-drop:before,
+.icon-arrow-left:before {
+  font-family: 'fontawesome';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 8px;
+  text-align: center;
+  text-indent: 8000px;
+  color: #47a3da;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container > header nav a:hover:before {
+  color: #fff;
+}
+
+.icon-drop:before {
+  content: '\e000';
+}
+
+.icon-arrow-left:before {
+  content: '\f060';
+}

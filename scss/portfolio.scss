@@ -1,0 +1,424 @@
+@charset 'utf-8';
+// メディアクエリ用のミックスイン
+// min-width
+@mixin min($width)
+{
+    @media screen and (min-width: $width + px)
+    {
+        @content;
+    }
+}
+// max-width
+@mixin max($width)
+{
+    @media screen and (max-width: $width + px)
+    {
+        @content;
+    }
+}
+// max-width and min-width
+@mixin and($max-width, $min-width)
+{
+    @media screen and (max-width: $max-width + px) and (min-width: $min-width + px)
+    {
+        @content;
+    }
+}
+// Retina ディスプレイ
+@mixin rt
+{
+    @media (-webkit-min-device-pixel-ratio: 2)
+    {
+        @content;
+    }
+}
+// @include max(640){}
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* portfolio-ナビ */
+
+nav.main-nav01
+{
+    height: 49px;
+
+    @include max(640)
+    {
+        display: none;
+    }
+}
+
+.main-nav01 ul
+{
+    font-size: 0;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    list-style: none;
+
+    white-space: nowrap;
+    li
+    {
+        display: inline-block;
+        &.main-nav-img01 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 135px;
+            height: 0;
+            padding-top: 29px;
+
+            background-image: url(../img/nav-img/nav_home_01.png);
+        }
+        &.main-nav-img02 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 145px;
+            height: 0;
+            padding-top: 29px;
+
+            background-image: url(../img/nav-img/nav_portfolio_top.png);
+        }
+        &.main-nav-img03 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 135px;
+            height: 0;
+            padding-top: 29px;
+
+            background-image: url(../img/nav-img/nav_blog.png);
+        }
+        &.main-nav-img04 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 135px;
+            height: 0;
+            padding-top: 29px;
+
+            background-image: url(../img/nav-img/nav_contact.png);
+        }
+    }
+}
+
+.name-nav-box
+{
+    position: absolute;
+
+    display: inline-block;
+    display: table-cell;
+
+    width: 950px;
+    height: 54px;
+    height: none;
+    margin-top: -21px;
+    margin-bottom: -19px;
+
+    background-image: url(../img/main-img/bg_portfolio_top.png);
+    background-repeat: no-repeat;
+
+    @include max(640)
+    {
+        position: static;
+
+        display: table-cell;
+
+        max-width: 100%;
+        height: 53px;
+
+        text-align: center;
+        vertical-align: middle;
+
+        -webkit-border-radius: 10px 10px 0 0;
+        /* Safari and Chrome */
+           -moz-border-radius: 10px 10px 0 0;
+        /* Firefox */
+                border-radius: 10px 10px 0 0;
+        background-color: #8ec31f;
+        background-image: none;
+    }
+    p
+    {
+        font-size: medium;
+        font-weight: bold;
+
+        margin-left: 35px;
+
+        @include max(640)
+        {
+            font-size: 15px;
+            font-weight: 300;
+
+            max-width: 95%;
+            margin: 0 auto;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+            text-align: center;
+        }
+    }
+}
+
+.sub-nav
+{
+    position: absolute;
+    top: 14px;
+    left: 790px;
+
+    @include max(640)
+    {
+        display: none;
+    }
+}
+
+
+.name-nav-box ul.sub-nav01
+{
+    font-size: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    text-align: right;
+    white-space: nowrap;
+    li
+    {
+        display: inline;
+
+        margin-left: 5px;
+        &.sub-nav-img001 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_home.png);
+        }
+        &.sub-nav-img002 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_portfolio.png);
+        }
+        &.sub-nav-img003 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_blog.png);
+        }
+        &.sub-nav-img004 a
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_contact.png);
+        }
+        &.sub-nav-img001 a:hover
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_home_hover.png);
+        }
+        &.sub-nav-img002 a:hover
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_portfolio_hover.png);
+        }
+        &.sub-nav-img003 a:hover
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_blog_hover.png);
+        }
+        &.sub-nav-img004 a:hover
+        {
+            line-height: 1.5;
+
+            display: inline-block;
+            overflow: hidden;
+
+            width: 25px;
+            height: 0;
+            padding-top: 25px;
+
+            background-image: url(../img/nav-img/sub_nav_contact_hover.png);
+        }
+    }
+}
+
+#pr-box01
+{
+    width: 950px;
+    max-width: 950px;
+    padding-top: 53px;
+    padding-bottom: 15px;
+
+    background: #8ec31f url(../img/main-img/content-img.png) fixed no-repeat center;
+
+    @include max(640)
+    {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+.slider-box
+{
+    max-width: 810px;
+    margin: 0 auto;
+
+    @include max(640)
+    {
+        max-width: 95%;
+        max-height: 50%;
+        margin: 0 auto;
+    }
+}
+
+
+footer
+{
+    overflow: hidden;
+
+    width: 950px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
+    background-color: #8ec31f;
+    background-image: url(../img/main-img/footer_img_portfolio.png?v=31231);
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @include max(640)
+    {
+        max-width: 95%;
+        margin: 0 auto;
+
+        background-size: 100%;
+    }
+    ul
+    {
+        font-size: x-small !important;
+
+        margin-left: 28px;
+        padding: 0;
+
+        @include max(640)
+        {
+            max-width: 100%;
+            margin-left: 0;
+
+            text-align: center;
+        }
+    }
+    li
+    {
+        display: inline-block;
+
+        margin-left: 10px;
+
+        color: #fff;
+        a
+        {
+            color: #fff;
+        }
+        &.footer-copy
+        {
+            font-size: x-small !important;
+
+            float: right;
+
+            margin: 5px 37px 10px;
+
+            @include max(640)
+            {
+                display: block;
+                float: none;
+
+                max-width: 100%;
+                margin: 0 auto;
+                margin-top: 5px;
+                margin-right: 0;
+                margin-bottom: 5px;
+                margin-left: 0;
+
+                text-align: center;
+            }
+        }
+    }
+}
+.bx-wrapper .bx-pager.bx-default-pager a
+{
+    @include max(640)
+    {
+        width: 95% !important;
+    }
+}

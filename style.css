@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/*
+theme name: KZDESIGN
+theme uri: url
+description: 俺のテーマ
+Author: Web Design & Create Kz.Desigh
+version:2016
+License: ライセンス
+License URI: ライセンスの URL
+*/
+
+/* テーマチェック */
+.wp-caption,.wp-caption-text,.sticky,.gallery-caption,.bypostauthor {font-size: 90%;}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="当サイトはWEBデザイナーを目指す河野和正のポートフォリオサイトです。">
+    <meta name="sns-description" content="大分県でのWEBのお仕事のご依頼を募集しております。">
+    <meta name="keywords" content="WEBデザイナー,ホームページ制作,ホームページ作成,ポートフォリオサイト,河野和正,">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Portfolio by KAZUMASA</title>
+    <style>
+    #canvas-holder {
+        width: 600px;
+        margin-left: -9em;
+    }
+
+    @media screen and (max-width: 320px) {
+        #canvas-holder {
+            width: 400px;
+            margin-left: -6em;
+        }
+    }
+    </style>
+    <script type="text/javascript" src="js/Chart.js"></script>
+</head>
+
+<body>
+    <div id="canvas-holder">
+        <canvas id="chart-area">
+    </div>
+    <script>
+    var doughnutData = [{
+        value: 210,
+        color: "#F7464A",
+        highlight: "#E9B647",
+        label: "Illustrator"
+    }, {
+        value: 160,
+        color: "#2B67A2",
+        highlight: "#2D6BA7",
+        label: "Photoshop"
+    }, {
+        value: 240,
+        color: "#FDB45C",
+        highlight: "#8A9D2E",
+        label: "Dreamweaver"
+    }, {
+        value: 290,
+        color: "#4C4C4C",
+        highlight: "#F08421",
+        label: "SublimeText"
+    }, {
+        value: 240,
+        color: "#2CACE3",
+        highlight: "#FFFEF9",
+        label: "Brackets"
+    }, {
+        value: 120,
+        color: "#87B278",
+        highlight: "#7BAB72",
+        label: "Excel"
+    }, {
+        value: 50,
+        color: "#617CBB",
+        highlight: "#616774",
+        label: "Word"
+    }, {
+        value: 50,
+        color: "#FE8457",
+        highlight: "#616774",
+        label: "PowerPoint"
+    }];
+
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+            responsive: true
+        });
+    };
+    </script>
+</body>
+
+</html>

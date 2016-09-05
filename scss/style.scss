@@ -1,0 +1,410 @@
+@charset 'utf-8';
+// メディアクエリ用のミックスイン
+// min-width
+@mixin min($width)
+{
+    @media screen and (min-width: $width + px)
+    {
+        @content;
+    }
+}
+// max-width
+@mixin max($width)
+{
+    @media screen and (max-width: $width + px)
+    {
+        @content;
+    }
+}
+// max-width and min-width
+@mixin and($max-width, $min-width)
+{
+    @media screen and (max-width: $max-width + px) and (min-width: $min-width + px)
+    {
+        @content;
+    }
+}
+// Retina ディスプレイ
+@mixin rt
+{
+    @media (-webkit-min-device-pixel-ratio: 2)
+    {
+        @content;
+    }
+}
+// @include max(640){}
+@font-face
+{
+    font-family: nicomoji;
+
+    src: url(../fonts/nicomoji-plus_v0.9.ttf);
+}
+@font-face
+{
+    font-family: fontpo;
+
+    src: url(../fonts/FontopoNIHONGO.otf);
+}
+@font-face
+{
+    font-family: skill;
+
+    src: url(../fonts/SAM_5C_27TRG_.TTF);
+}
+/*------------------------------------------------------------ 画像位置・文字装飾------------------------------------------------------------*/
+.aligncenter
+{
+    display: block;
+
+    margin: 0 auto 1em;
+}
+
+.alignright
+{
+    float: right;
+
+    margin: 0 0 1em 40px;
+}
+
+.alignleft
+{
+    float: left;
+
+    margin: 0 40px 1em 0;
+}
+/*------------------------------------------------------------ 位置調整------------------------------------------------------------*/
+.centering
+{
+    max-width: 850px;
+    margin: 0 auto;
+
+    @include max(640)
+    {
+        max-width: 94%;
+        margin: 0 auto;
+    }
+}
+
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+a:hover
+{
+    opacity: .7;
+}
+.clear
+{
+    clear: both;
+}
+.clearfix:after
+{
+    display: block;
+    clear: both;
+
+    content: ' ';
+}
+body
+{
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    color: #fff;
+    background: url(../img/main-img/bg-img.png) #0f0915 repeat-x !important;
+}
+header
+{
+    overflow: hidden;
+
+    width: 100%;
+    min-width: 950px;
+    height: 2em;
+
+    background-color: #e3e3e3;
+
+    @include max(640)
+    {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    ul
+    {
+        width: 950px;
+        margin: 0 auto;
+        margin-top: 3px;
+        padding: 0 5px;
+
+        list-style: none;
+
+        @include max(640)
+        {
+            max-width: 95%;
+        }
+        li
+        {
+            &.text-left
+            {
+                font-size: 15px;
+                font-weight: bold;
+
+                float: left;
+
+                margin-top: 4px;
+                a
+                {
+                    text-decoration: none;
+
+                    color: #0f0915;
+                }
+            }
+            &.text-right
+            {
+                font-size: 12px;
+
+                float: right;
+
+                margin-top: 6px;
+                padding-right: 5px;
+
+                color: #0f0915;
+
+                @include max(640)
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+#content-wrap
+{
+    max-width: 950px;
+    margin: 0 auto;
+
+    color: #fff;
+
+    @include max(640)
+    {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+.main-logo01
+{
+    h1 a
+    {
+        line-height: 1.5;
+
+        display: block;
+        overflow: hidden;
+
+        width: 950px;
+        height: 0;
+        padding-top: 150px;
+
+        background: transparent url('../img/main-img/main-visual.png') 0 0 no-repeat;
+
+        @include max(640)
+        {
+            font-size: 0;
+
+            float: left;
+
+            max-width: 82%;
+            height: 0;
+            margin: 0 auto;
+            padding-top: 0;
+            padding-top: 15%;
+
+            text-align: left;
+
+            background-size: 100%;
+        }
+        &:hover
+        {
+            background-position: 0 3px;
+        }
+    }
+    &:after
+    {
+        display: block;
+        visibility: hidden;
+        clear: both;
+        zoom: 1;
+
+        height: 0;
+
+        content: '.';
+    }
+}
+/*------------------------------------------------------------ 自前のバルーンシェアボタン ------------------------------------------------------------*/
+/*bottom*/
+
+#sns-btn-bottom
+{
+    margin: 5px 15px;
+    padding: 10px 0;
+
+    text-align: center;
+}
+
+.balloon-btn-set
+{
+    width: 70px;
+    height: 63px;
+    a
+    {
+        font-size: 15px;
+
+        display: block;
+
+        text-decoration: none;
+
+        color: #777;
+    }
+}
+
+.balloon-btn-horizontal
+{
+    display: inline-block;
+
+    margin: 5px 2px 22px 2px;
+
+    text-align: center;
+}
+
+a
+{
+    &.arrow-box-horizontal-link
+    {
+        font-weight: bold;
+
+        text-align: center;
+        &:hover
+        {
+            color: #777;
+        }
+    }
+    &.balloon-btn-horizontal-link
+    {
+        line-height: 25px !important;
+
+        position: relative;
+        top: 7px;
+
+        width: 68px;
+        height: 25px;
+
+        color: white;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        &:hover
+        {
+            opacity: .6;
+            color: white;
+        }
+    }
+    &.twitter-balloon-btn-horizontal-link
+    {
+        background-color: #6bace2;
+    }
+    &.facebook-balloon-btn-horizontal-link
+    {
+        background-color: #445d93;
+    }
+    &.googleplus-balloon-btn-horizontal-link
+    {
+        background-color: #d36054;
+    }
+    &.hatena-balloon-btn-horizontal-link
+    {
+        background-color: #4c7ec6;
+    }
+    &.pocket-balloon-btn-horizontal-link
+    {
+        background-color: #e15c69;
+    }
+    &.line-balloon-btn-horizontal-link
+    {
+        background-color: #50c150;
+    }
+    &.feedly-balloon-btn-horizontal-link
+    {
+        background-color: #94be61;
+    }
+}
+
+.arrow-box-horizontal
+{
+    line-height: 33px;
+
+    position: relative;
+    top: -7px;
+
+    display: inline-block;
+
+    width: 68px;
+    height: 33px;
+
+    text-align: center;
+
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background: #fff;
+    &:after,
+    &:before
+    {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+
+        width: 0;
+        height: 0;
+
+        content: ' ';
+        pointer-events: none;
+
+        border: solid transparent;
+    }
+    &:after
+    {
+        margin-left: -3px;
+
+        border-width: 3px;
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #fff;
+    }
+    &:before
+    {
+        margin-left: -5px;
+
+        border-width: 5px;
+        border-color: rgba(187, 187, 187, 0);
+        border-top-color: #bbb;
+    }
+}
+
+/*  head  */
+
+.share-num
+{
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #fff;
+}
+
+.clearfloat
+{
+    font-size: 1px;
+    line-height: 0;
+
+    clear: both;
+
+    height: 0;
+}

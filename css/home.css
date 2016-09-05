@@ -1,0 +1,116 @@
+@charset "UTF-8";
+img { max-width: 100%; height: auto; }
+
+h2 { font: bold 24px/1.6 Arial, Helvetica, sans-serif; position: relative; margin: 0 15px; padding: 10px 20px; color: #333; border: #333 solid 3px; border-radius: 18px; background: #fff; box-shadow: -7px -5px 0 0 #e8e8e8 inset, 2px 3px 0 0 #000; }
+h2:before { position: absolute; top: 100%; left: 14px; width: 0; height: 0; content: ' '; border-width: 20px; border-style: solid; border-color: transparent; border-top-color: #333; }
+h2:after { position: absolute; bottom: -27px; left: 18px; width: 0; height: 0; content: ' '; border-width: 14px; border-style: solid; border-color: transparent; border-top-color: #e8e8e8; }
+
+nav.main-nav01 { height: 49px; }
+@media screen and (max-width: 640px) { nav.main-nav01 { display: none; } }
+
+.main-nav01 ul { font-size: 0; overflow: hidden; padding: 0; list-style: none; white-space: nowrap; }
+.main-nav01 ul li { display: inline-block; }
+.main-nav01 ul li.main-nav-img01 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 145px; height: 0; padding-top: 29px; background-image: url(../img/nav-img/nav_home.png); }
+.main-nav01 ul li.main-nav-img02 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 135px; height: 0; padding-top: 29px; background-image: url(../img/nav-img/nav_portfolio.png); }
+.main-nav01 ul li.main-nav-img03 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 135px; height: 0; padding-top: 29px; background-image: url(../img/nav-img/nav_blog.png); }
+.main-nav01 ul li.main-nav-img04 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 135px; height: 0; padding-top: 29px; background-image: url(../img/nav-img/nav_contact.png); }
+
+.name-nav-box { position: absolute; display: inline-block; width: 950px; height: 54px; margin-top: -20px; background-image: url(../img/main-img/bg_home01.png); background-repeat: no-repeat; }
+@media screen and (max-width: 640px) { .name-nav-box { position: static; display: block; max-width: 100%; height: 95%; margin: 0 auto; margin-bottom: -1px; padding-bottom: 12px; -webkit-border-radius: 10px 10px 0 0; /* Safari and Chrome */ -moz-border-radius: 10px 10px 0 0; /* Firefox */ border-radius: 10px 10px 0 0; background: -webkit-gradient(linear, left top, left bottom, from(#e60611), to(#ea5505)); background-color: #e71110; background-image: none; behavior: url(border-radius.htc); /* IE */ } }
+.name-nav-box p { margin: 0; }
+@media screen and (max-width: 640px) { .name-nav-box p { display: block; } }
+
+.name01 { font-size: 36px; font-weight: bold; padding-top: 3px; padding-left: 33px; }
+@media screen and (max-width: 640px) { .name01 { display: inline-block; padding-left: 0; text-align: center; } }
+
+.name02 { font-size: 19px; position: absolute; top: 7px; left: 11em; }
+@media screen and (max-width: 640px) { .name02 { font-size: 18px; position: static; display: inline-block; padding-left: 0; text-align: center; } }
+
+.birthday { font-size: 14px; position: absolute; top: 28px; left: 14.8em; }
+@media screen and (max-width: 640px) { .birthday { font-size: 13px; position: static; display: inline-block; padding-right: 0; text-align: center; } }
+
+.sub-nav { position: absolute; top: 14px; left: 790px; }
+@media screen and (max-width: 640px) { .sub-nav { display: none; } }
+
+.name-nav-box ul.sub-nav01 { font-size: 0; padding: 0; list-style: none; text-align: right; white-space: nowrap; }
+.name-nav-box ul.sub-nav01 li { display: inline; margin-left: 5px; }
+.name-nav-box ul.sub-nav01 li.sub-nav-img001 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_home.png); }
+.name-nav-box ul.sub-nav01 li.sub-nav-img002 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_portfolio.png); }
+.name-nav-box ul.sub-nav01 li.sub-nav-img003 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_blog.png); }
+.name-nav-box ul.sub-nav01 li.sub-nav-img004 a { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_contact.png); }
+.name-nav-box ul.sub-nav01 li.sub-nav-img001 a:hover { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_home_hover.png); }
+.name-nav-box ul.sub-nav01 li.sub-nav-img002 a:hover { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_portfolio_hover.png); }
+.name-nav-box ul.sub-nav01 li.sub-nav-img003 a:hover { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_blog_hover.png); }
+.name-nav-box ul.sub-nav01 li.sub-nav-img004 a:hover { line-height: 1.5; display: inline-block; overflow: hidden; width: 25px; height: 0; padding-top: 25px; background-image: url(../img/nav-img/sub_nav_contact_hover.png); }
+
+#pr-box01 { overflow: hidden; width: 950px; max-width: 950px; padding-top: 60px; padding-bottom: 15px; background: #e60012 url(../img/main-img/content-img.png) fixed no-repeat center; }
+@media screen and (max-width: 640px) { #pr-box01 { min-width: 100%; max-width: 100%; margin: 0 auto; } }
+#pr-box01 section.text-box01 { width: 880px; margin: 0 auto; }
+@media screen and (max-width: 640px) { #pr-box01 section.text-box01 { max-width: 100%; } }
+#pr-box01 section.text-box01 h2 { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-size: 26px; font-weight: bold; width: 104px; }
+#pr-box01 section.text-box01 p { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; width: 880px; margin: 25px auto; }
+@media screen and (max-width: 640px) { #pr-box01 section.text-box01 p { max-width: 95%; } }
+#pr-box01 section.text-box02, #pr-box01 section.text-box03 { width: 880px; margin: 0 auto; }
+@media screen and (max-width: 640px) { #pr-box01 section.text-box02, #pr-box01 section.text-box03 { max-width: 100%; } }
+#pr-box01 section.text-box02 h2, #pr-box01 section.text-box03 h2 { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; font-weight: bold; width: 51px; }
+#pr-box01 section.text-box02 p, #pr-box01 section.text-box03 p { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; width: 880px; margin: 25px auto; }
+@media screen and (max-width: 640px) { #pr-box01 section.text-box02 p, #pr-box01 section.text-box03 p { max-width: 95%; } }
+#pr-box01 section.skill-box01 { display: inline-block; float: left; width: 400px; }
+@media screen and (max-width: 640px) { #pr-box01 section.skill-box01 { max-width: 100%; } }
+#pr-box01 section.skill-box01 h2 { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; width: 50px; margin-left: 50px; }
+@media screen and (max-width: 640px) { #pr-box01 section.skill-box01 h2 { margin-left: 18px; } }
+#pr-box01 section.skill-box01 dl { width: 360px; margin-left: 25px; }
+@media screen and (max-width: 640px) { #pr-box01 section.skill-box01 dl { width: 360px; margin-left: 0; } }
+@media screen and (max-width: 370px) { #pr-box01 section.skill-box01 dl { width: 370px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.skill-box01 dl { width: 320px; } }
+#pr-box01 section.skill-box01 dl dd { display: inline-block; width: 114px; margin: 0; padding: 0; }
+@media screen and (max-width: 640px) { #pr-box01 section.skill-box01 dl dd { width: 114px; } }
+@media screen and (max-width: 370px) { #pr-box01 section.skill-box01 dl dd { width: 104px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.skill-box01 dl dd { width: 96px; } }
+#pr-box01 section.skill-box01 dt { display: inline-block; margin: 8px 10px 0; }
+@media screen and (max-width: 320px) { #pr-box01 section.skill-box01 dt { margin: 8px 1px 1px 7px; } }
+#pr-box01 section.skill-box01 p { font-family: skill; width: 114px; margin: 0; }
+@media screen and (max-width: 640px) { #pr-box01 section.skill-box01 p { font-size: 15px; max-width: 100%; } }
+@media screen and (max-width: 370px) { #pr-box01 section.skill-box01 p { font-size: 14px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.skill-box01 p { font-size: 13px; } }
+#pr-box01 section.chart-box01 { display: inline-block; float: left; width: 330px; height: 320px; }
+@media screen and (max-width: 640px) { #pr-box01 section.chart-box01 { float: none; max-width: 100%; } }
+@media screen and (max-width: 320px) { #pr-box01 section.chart-box01 { height: 230px; } }
+#pr-box01 section.chart-box01 iframe { width: 330px; height: 318px; }
+@media screen and (max-width: 640px) { #pr-box01 section.chart-box01 iframe { width: 330px; } }
+@media screen and (max-width: 370px) { #pr-box01 section.chart-box01 iframe { width: 330px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.chart-box01 iframe { width: 320px; height: 230px; } }
+#pr-box01 section.skillbox02 { display: inline-block; float: left; clear: both; width: 400px; }
+@media screen and (max-width: 640px) { #pr-box01 section.skillbox02 { max-width: 100%; } }
+#pr-box01 section.skillbox02 h2 { font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; font-weight: bold; width: 50px; margin-left: 50px; }
+@media screen and (max-width: 640px) { #pr-box01 section.skillbox02 h2 { margin-left: 18px; } }
+#pr-box01 section.skillbox02 dl { width: 360px; margin-left: 25px; }
+@media screen and (max-width: 640px) { #pr-box01 section.skillbox02 dl { width: 360px; margin-left: 0; } }
+@media screen and (max-width: 370px) { #pr-box01 section.skillbox02 dl { width: 370px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.skillbox02 dl { width: 320px; } }
+#pr-box01 section.skillbox02 dl dd { display: inline-block; width: 114px; margin: 0; padding: 0; }
+@media screen and (max-width: 640px) { #pr-box01 section.skillbox02 dl dd { width: 114px; } }
+@media screen and (max-width: 370px) { #pr-box01 section.skillbox02 dl dd { width: 104px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.skillbox02 dl dd { width: 96px; } }
+#pr-box01 section.skillbox02 dt { display: inline-block; margin: 8px 10px 0; }
+@media screen and (max-width: 320px) { #pr-box01 section.skillbox02 dt { margin: 8px 1px 1px 7px; } }
+#pr-box01 section.skillbox02 p { font-family: skill; width: 114px; margin: 0; }
+@media screen and (max-width: 640px) { #pr-box01 section.skillbox02 p { font-size: 15px; max-width: 100%; } }
+@media screen and (max-width: 370px) { #pr-box01 section.skillbox02 p { font-size: 14px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.skillbox02 p { font-size: 13px; } }
+#pr-box01 section.chart-box02 { display: inline-block; float: left; width: 330px; height: 320px; }
+@media screen and (max-width: 640px) { #pr-box01 section.chart-box02 { float: none; max-width: 100%; } }
+@media screen and (max-width: 320px) { #pr-box01 section.chart-box02 { height: 230px; } }
+#pr-box01 section.chart-box02 iframe { width: 330px; height: 318px; }
+@media screen and (max-width: 640px) { #pr-box01 section.chart-box02 iframe { width: 330px; } }
+@media screen and (max-width: 370px) { #pr-box01 section.chart-box02 iframe { width: 330px; } }
+@media screen and (max-width: 320px) { #pr-box01 section.chart-box02 iframe { width: 320px; height: 230px; } }
+
+footer { overflow: hidden; width: 950px; min-width: 950px; margin: 0 auto; background-color: #e60012; background-image: url(../img/main-img/footer_img_home.png?d=4242); background-repeat: no-repeat; background-position: bottom; }
+@media screen and (max-width: 640px) { footer { min-width: 95%; max-width: 95%; margin: 0 auto; background-size: 100%; } }
+footer ul { font-size: x-small !important; margin-left: 28px; padding: 0; }
+@media screen and (max-width: 640px) { footer ul { max-width: 100%; margin-left: 0; text-align: center; } }
+footer li { display: inline-block; margin-left: 10px; color: #fff; }
+footer li a { color: #fff; }
+footer li.footer-copy { font-size: x-small !important; float: right; margin: 5px 37px 10px; }
+@media screen and (max-width: 640px) { footer li.footer-copy { display: block; float: none; max-width: 100%; margin: 0 auto; margin-top: 5px; margin-right: 0; margin-bottom: 5px; margin-left: 0; text-align: center; } }
